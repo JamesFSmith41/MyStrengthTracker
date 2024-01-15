@@ -2,6 +2,7 @@ import React from 'react'
 import { CalorieCounter } from '../Components/CalorieCounter/CalorieCounter';
 import type { User } from '@/app/lib/defintions';
 import { MacroCounter } from '../Components/MacroTracker/MacroCounter';
+import  Layout from '../Components/Layout/Layout';
 
 const dashboard = () => {
   const user = {
@@ -15,13 +16,13 @@ const dashboard = () => {
     fats: 0,
   }
   return (
-    <div>
+    <Layout>
         <p className="text-slate-900 font-bold text-2xl">
             Dashboard
         </p>
         <CalorieCounter {...user}/>
         <MacroCounter {...user}/>
-    </div>
+    </Layout>
   )
 }
 
