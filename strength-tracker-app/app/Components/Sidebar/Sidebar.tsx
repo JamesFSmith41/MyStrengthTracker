@@ -36,7 +36,7 @@ export const Sidebar = () => {
 
   return (
     <div 
-    className='w-full p-5 h-full flex flex-col bg-uiElement rounded-md  items-end'>
+    className='p-5 h-full flex flex-col bg-uiElement rounded-md  items-end w-max-10'>
         <button className="bg-uiElement hover:bg-ultraWhite font-bold text-xl p-2 w-10 rounded-md"
         onClick={() => setVis(!toggleVis)}
         > 

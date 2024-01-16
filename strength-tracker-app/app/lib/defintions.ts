@@ -8,3 +8,10 @@ export type User = {
     carbs: number,
     fats: number,
 }
+
+export type Workout = {
+    name: string, 
+    sets: string,
+    reps: string,
+    weight: string,
+}

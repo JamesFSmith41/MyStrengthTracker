@@ -11,6 +11,7 @@ const config: Config = {
       transparent: 'transparent',
       current: 'currentColor',
       'ultraWhite' : '#FAFCFF',
+      'ultraWhiteHover' : '#EAF2FF',
       'whiteElement': '#D7DADF  ',
       'uiElement': '#CACDD1',
       'uiButton' : '#266FD0',
