@@ -19,7 +19,6 @@ export const WorkoutItem = (workout: Workout) => {
     function updateState(newState : Workout) {
         setWorkoutState(newState);
         console.log("Change State")
-        console.log
     }
 
     return (
