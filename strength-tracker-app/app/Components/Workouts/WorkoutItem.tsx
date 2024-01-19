@@ -25,7 +25,7 @@ export const WorkoutItem = (workout: Workout) => {
     <div>
         <div className='cursor-pointer drop-shadow-md flex flex-row bg-ultraWhite justify-between w-full rounded-md p-3 hover:bg-ultraWhiteHover'
         onClick={() => handleClick()}>
-            <p className="text-xl font-bold w-1/4 text-center"> {workoutState.name} </p>
+            <p className="text-xl font-bold w-1/4 text-center"> {workoutState.workoutname} </p>
             <p className="text-xl font-bold w-1/4 text-center"> {workoutState.sets} </p>
             <p className="text-xl font-bold w-1/4 text-center"> {workoutState.reps} </p>
             <p className="text-xl font-bold w-1/4 text-center"> {workoutState.weight} </p>

@@ -1,11 +1,31 @@
 const workouts = [
     { 
-        id: '410544b2-4001-4271-9855-fec4b6a6442a',
+        workoutname: 'Bicep Curl',
         name: 'testUser',
-        workoutName: 'Bicep Curl',
         sets: '3',
         reps: '12',
         weight: '27.5lbs'
+    },
+    { 
+        workoutname: 'Hammer Curl',
+        name: 'testUser',
+        sets: '3',
+        reps: '10',
+        weight: '27.5lbs'
+    },
+    { 
+        workoutname: 'Hamstring Curl',
+        name: 'testUser',
+        sets: '3',
+        reps: '14',
+        weight: '85lbs'
+    },
+    { 
+        workoutname: 'Tricep Pushdown',
+        name: 'testUser',
+        sets: '3',
+        reps: '8',
+        weight: '120lbs'
     }
 ]
 

@@ -1,3 +1,5 @@
+import { UUID } from "crypto"
+
 export type User = {
     name: string,
     email: string,
@@ -10,6 +12,7 @@ export type User = {
 }
 
 export type Workout = {
+    workoutname: string,
     name: string, 
     sets: string,
     reps: string,

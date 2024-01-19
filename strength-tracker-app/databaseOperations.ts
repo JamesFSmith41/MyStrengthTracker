@@ -10,5 +10,14 @@ export async function workoutUpdate(workouts : Workout[], userId : string) {
     } catch (error) {
         console.log(error)
     }
+}
 
+export async function workoutFetch(userId : string) {
+    try {
+        console.log("Connecting to db");
+        const client = await db.connect();
+        return await client.sql`SELECT * FROM workouts WHERE Name = ${userId}`
+    } catch (error) {
+        console.log(error)
+    }
 }

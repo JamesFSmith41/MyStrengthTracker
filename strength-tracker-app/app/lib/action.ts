@@ -1,6 +1,6 @@
 'use server'
 import { Workout } from "./defintions"
-import { workoutUpdate } from "@/databaseOperations";
+import { workoutUpdate, workoutFetch } from "@/databaseOperations";
 
 export async function updateWorkouts(workouts : Workout[], userId : string) {
     try {
@@ -8,5 +8,14 @@ export async function updateWorkouts(workouts : Workout[], userId : string) {
         await workoutUpdate(workouts, userId)
     } catch (error) {
         console.log(error)
+    }
+}
+
+export async function getWorkouts(userId : string) {
+    try {
+        console.log(userId);
+        return await workoutFetch(userId);
+    } catch (error) {
+        console.log(error);
     }
 }

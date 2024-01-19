@@ -14,13 +14,14 @@ export const WorkoutEditor: React.FC<{work : Workout, setWorkout: any}> = (props
         onSubmit={(e: React.SyntheticEvent) => {
             e.preventDefault();
             const target = e.target as typeof e.target & {
-                name: { value: string };
+                workoutname: { value: string };
                 sets: { value: string };
                 reps: {value : string};
                 weight: {value : string};
             };
             const newWorkout = {
-                name: target.name.value,
+                workoutname: target.workoutname.value,
+                name: "testUser",
                 sets: target.sets.value,
                 reps: target.reps.value,
                 weight: target.weight.value
@@ -32,9 +33,9 @@ export const WorkoutEditor: React.FC<{work : Workout, setWorkout: any}> = (props
             <div className="flex flex-row justify-between"> 
                 <input 
                 type="text"
-                id="name"
-                name="name"
-                placeholder={work.name}
+                id="workoutname"
+                name="workoutname"
+                placeholder={work.workoutname}
                 required
                 className="rounded-md mx-4 p-2"
                 />
