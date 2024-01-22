@@ -21,3 +21,13 @@ export async function workoutFetch(userId : string) {
         console.log(error)
     }
 }
+
+export async function userFetch(userId : string) {
+    try {
+        console.log("Connecting to db");
+        const client = await db.connect();
+        return await client.sql`SELECT * from users WHERE name = ${userId}`
+    } catch (error) {
+        console.log(error)
+    }
+}

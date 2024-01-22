@@ -3,8 +3,10 @@ import React from 'react'
 import { useState } from 'react';
 import type { User } from '@/app/lib/defintions';
 
-export const CalorieCounter = (user : User) => {
-  const [calories, setCalories] = useState(user.calorieCount)
+export const CalorieCounter: React.FC<{user : User}> = (props)  => {
+  const user = props.user;
+
+  const [calories, setCalories] = useState(user.caloriecount)
   const [calorieInput, setInput] = useState(0)
   const [backColor, setColor] = useState("bg-calorieBlue")
   async function AddCalories() {

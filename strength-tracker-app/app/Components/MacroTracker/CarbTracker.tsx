@@ -3,7 +3,8 @@ import React from 'react'
 import { useState } from 'react';
 import type { User } from '@/app/lib/defintions';
 
-export const CarbTracker = (user : User) => {
+export const CarbTracker : React.FC<{user : User}> = (props)  => {
+    const user = props.user;
     const [carbs, setcarbs] = useState(user.carbs)
     const [carbsInput, setInput] = useState(0)
     const [backColor, setColor] = useState("bg-calorieBlue")

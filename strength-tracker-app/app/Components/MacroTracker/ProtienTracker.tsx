@@ -3,7 +3,9 @@ import React from 'react'
 import { useState } from 'react';
 import type { User } from '@/app/lib/defintions';
 
-export const ProtienTracker = (user : User) => {
+export const ProtienTracker : React.FC<{user : User}> = (props)  =>{
+    const user = props.user;
+     
     const [protien, setProtien] = useState(user.protien)
     const [protienInput, setInput] = useState(0)
     const [backColor, setColor] = useState("bg-calorieBlue")

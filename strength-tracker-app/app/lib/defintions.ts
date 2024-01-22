@@ -4,7 +4,7 @@ export type User = {
     name: string,
     email: string,
     password: string,
-    calorieCount: number,
+    caloriecount: number,
     weight: number,
     protien: number,
     carbs: number,

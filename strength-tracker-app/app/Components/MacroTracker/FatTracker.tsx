@@ -3,7 +3,8 @@ import React from 'react'
 import { useState } from 'react';
 import type { User } from '@/app/lib/defintions';
 
-export const FatTracker = (user : User) => {
+export const FatTracker: React.FC<{user : User}> = (props)  => {
+    const user = props.user;
     const [fat, setFat] = useState(user.fats)
     const [fatInput, setInput] = useState(0)
     const [backColor, setColor] = useState("bg-calorieBlue")
