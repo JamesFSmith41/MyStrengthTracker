@@ -1,6 +1,9 @@
 'use server'
 import { Workout } from "./app/lib/defintions"
 import { sql } from '@vercel/postgres';
+import { z } from 'zod';
+import Credentials from 'next-auth/providers/credentials';
+import { authConfig } from './auth.config';
 
 const { db } = require('@vercel/postgres');
 
@@ -31,3 +34,8 @@ export async function userFetch(userId : string) {
         console.log(error)
     }
 }
+
+export const {auth, signIn, signOut} = NextAuth({ 
+    ...authConfig,
+
+})

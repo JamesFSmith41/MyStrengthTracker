@@ -28,3 +28,24 @@ export async function getUser(userId : string) {
         console.log(error);
     }
 }
+
+
+export async function authenticate(
+    prevState: string | undefined,
+    formData : FormData
+) {
+    try {
+        await signIn('credentials', formData);
+    } catch (error) {
+        if (error) {
+            switch(error) {
+                case 'CredentialsSignin':
+                    return 'Invalid Credentials';
+
+                default:
+                    return 'Something went wrong';
+            }
+        }
+        throw error;
+    }
+}
